@@ -338,28 +338,28 @@
 
 // Promise Builder
 
-function buildPromise() {
-  const promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve({ message: "success" });
-      // reject(new Error("Something went wrong"));
-    }, 2000);
-  });
-  return promise;
-}
+// function buildPromise() {
+//   const promise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve({ message: "success" });
+//       // reject(new Error("Something went wrong"));
+//     }, 2000);
+//   });
+//   return promise;
+// }
 
 // Promise Consumer
 // - then...catch
 // - async...await
 
-async function consumePromise() {
-  try {
-    const response = await buildPromise();
-    console.log("RESPONSE : ", response);
-  } catch (err) {
-    console.error(err);
-  }
-}
+// async function consumePromise() {
+//   try {
+//     const response = await buildPromise();
+//     console.log("RESPONSE : ", response);
+//   } catch (err) {
+//     console.error(err);
+//   }
+// }
 
 // function consumePromise() {
 //   buildPromise()
@@ -373,4 +373,4 @@ async function consumePromise() {
 //     .catch((error) => console.error("[ERROR CAUGHT]", error));
 // }
 
-consumePromise();
+// consumePromise();
