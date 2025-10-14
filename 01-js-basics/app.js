@@ -374,3 +374,56 @@
 // }
 
 // consumePromise();
+
+// // PROMISE API METHODS
+
+// // - all : All or None
+// // - allSettled : Parallel Execution of All Promise including rejeceted
+// // - race : will provide first settled promise (including both success and failure)
+// // - any: will provide first successfuly settled promise
+// // - resolve: immediatedly resolved the promise
+// // - reject: immediatedly reject the promise
+
+function promiseFactory(data, ms) {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(data), ms);
+  });
+}
+
+const promiseOne = promiseFactory("First Package", 1000);
+const promiseTwo = promiseFactory("Second Package", 1500);
+const promiseThree = promiseFactory("Third Package", 2000);
+const promiseFour = Promise.resolve("Resolved");
+const promiseFive = Promise.reject(new Error("Something went wrong"));
+
+const promiseArray = [
+  promiseOne,
+  promiseTwo,
+  promiseThree,
+  promiseFour,
+  promiseFive,
+];
+
+// Promise.any(promiseArray)
+//   .then((result) => {
+//     console.log("[ANY]", result);
+//   })
+//   .catch(console.error);
+
+// Promise.race(promiseArray)
+//   .then((result) => {
+//     console.log("[RACE]", result);
+//   })
+//   .catch(console.error);
+
+Promise.allSettled(promiseArray)
+  .then((result) => {
+    console.log("[ALL SETTLED]", result);
+  })
+  .catch(console.error);
+
+Promise.all(promiseArray)
+  .then((result) => {
+    console.log("[ALL]", result);
+  })
+  .catch(console.error);
