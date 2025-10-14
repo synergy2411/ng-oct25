@@ -61,4 +61,16 @@
 - Primitive Types : String, Number, Boolean, Symbol
 - Reference Types : Objects, Array, Date, Function
 
-# Shallow Copy and Deep Copy
+### Shallow Copy and Deep Copy
+
+## ES6+ Features
+
+- Arrow functions =>
+- Rest/ Spread Operator (...)
+- Destructuring
+- Template Literals (``)
+- Block Scoping (let / const)
+- Default Parameter
+- Promises
+  > then...catch
+  > async...await

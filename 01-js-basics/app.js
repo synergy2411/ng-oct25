@@ -299,10 +299,78 @@
 
 // // DEFAULT PARAMETER
 
-function getLength(arr = []) {
-  //   arr = arr || [];      // Bad Practice - Trying to mutate the supplied argument
-  return arr.length;
+// function getLength(arr = []) {
+//   //   arr = arr || [];      // Bad Practice - Trying to mutate the supplied argument
+//   return arr.length;
+// }
+
+// console.log("Length : ", getLength([, 2, 3, 4, 5]));
+// console.log("Length : ", getLength());
+
+// // ASYNCHRONOUS PROGRAMMING
+
+// function longRunningOperation(reqId, cb) {
+//   setTimeout(() => {
+//     console.log("Running the operation for Request - ", reqId);
+//     cb();
+//   }, 2000);
+// }
+
+// function webRequest(req) {
+//   console.log("Start");
+//   longRunningOperation(req.id, function () {
+//     console.log("End");
+//   });
+// }
+
+// webRequest({ id: 101 });
+// webRequest({ id: 102 });
+
+// OUTPUT :
+// - Start 101
+// - ENd 101
+// - Start 102
+// - End 102
+// - after 2 seconds Op 101
+// - after 2 seconds Op 102
+
+// // PROMISE
+
+// Promise Builder
+
+function buildPromise() {
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve({ message: "success" });
+      // reject(new Error("Something went wrong"));
+    }, 2000);
+  });
+  return promise;
 }
 
-console.log("Length : ", getLength([, 2, 3, 4, 5]));
-console.log("Length : ", getLength());
+// Promise Consumer
+// - then...catch
+// - async...await
+
+async function consumePromise() {
+  try {
+    const response = await buildPromise();
+    console.log("RESPONSE : ", response);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+// function consumePromise() {
+//   buildPromise()
+//     .then((response) => {
+//       console.log("FIRST THEN RESPONSE : ", response);
+//       return response.message;
+//     })
+//     .then((prevMessage) => {
+//       console.log("SECOND THEN RESPONSE : ", prevMessage);
+//     })
+//     .catch((error) => console.error("[ERROR CAUGHT]", error));
+// }
+
+consumePromise();
