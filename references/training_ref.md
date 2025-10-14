@@ -74,3 +74,11 @@
 - Promises
   > then...catch
   > async...await
+
+---
+
+# TypeScript
+
+## TypeScript Project
+
+> npm create vite@latest

@@ -427,3 +427,9 @@ Promise.all(promiseArray)
     console.log("[ALL]", result);
   })
   .catch(console.error);
+
+let x = "20";
+let y = 20;
+
+console.log(x == y); // Loose type checking
+console.log(x === y); // Strong type checking
