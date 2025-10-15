@@ -172,43 +172,43 @@
 
 //// ABSTRACT CLASSES
 
-abstract class Receipe {
-  abstract collectIngredients(): void;
-  abstract prepareTheReceipte(): void;
-  abstract cleanUp(): void;
+// abstract class Receipe {
+//   abstract collectIngredients(): void;
+//   abstract prepareTheReceipte(): void;
+//   abstract cleanUp(): void;
 
-  execute() {
-    this.collectIngredients();
-    this.prepareTheReceipte();
-    this.cleanUp();
-  }
-}
+//   execute() {
+//     this.collectIngredients();
+//     this.prepareTheReceipte();
+//     this.cleanUp();
+//   }
+// }
 
-class Tea extends Receipe {
-  collectIngredients(): void {
-    console.log("Tea leafs, sugar, water, ginger");
-  }
-  prepareTheReceipte(): void {
-    console.log("Boil the water");
-    console.log("Add all ingredients");
-  }
-  cleanUp(): void {
-    console.log("Clean up all dishes and boiler");
-  }
-}
+// class Tea extends Receipe {
+//   collectIngredients(): void {
+//     console.log("Tea leafs, sugar, water, ginger");
+//   }
+//   prepareTheReceipte(): void {
+//     console.log("Boil the water");
+//     console.log("Add all ingredients");
+//   }
+//   cleanUp(): void {
+//     console.log("Clean up all dishes and boiler");
+//   }
+// }
 
-const gingerTea = new Tea();
-gingerTea.execute();
+// const gingerTea = new Tea();
+// gingerTea.execute();
 
-interface HasFormatter {
-  format: () => void;
-}
+// interface HasFormatter {
+//   format: () => void;
+// }
 
-class Paint implements HasFormatter {
-  format() {
-    console.log("Performs formatting");
-  }
-}
+// class Paint implements HasFormatter {
+//   format() {
+//     console.log("Performs formatting");
+//   }
+// }
 
 // // GENERICS
 // function addAtBeginning(item: string, arr: Array<string>): Array<string> {
@@ -218,16 +218,104 @@ class Paint implements HasFormatter {
 // const modifedArray = addAtBeginning("Monica", ["Joey", "Rachel", "Chandler"]);
 // console.log("Modified Array : ", modifedArray);
 
-function addAtBeginning<T>(item: T, arr: Array<T>): Array<T> {
-  return [item, ...arr];
-}
+// // GENERIC FUNCTION
+// function addAtBeginning<T>(item: T, arr: Array<T>): Array<T> {
+//   return [item, ...arr];
+// }
 
-const numberArray = addAtBeginning<number>(99, [98, 92, 89, 84]);
-console.log("Number Array : ", numberArray);
+// const numberArray = addAtBeginning<number>(99, [98, 92, 89, 84]);
+// console.log("Number Array : ", numberArray);
 
-const stringArray = addAtBeginning<string>("Monica", [
-  "Joey",
-  "Rachel",
-  "Chandler",
-]);
-console.log("String Array : ", stringArray);
+// const stringArray = addAtBeginning<string>("Monica", [
+//   "Joey",
+//   "Rachel",
+//   "Chandler",
+// ]);
+// console.log("String Array : ", stringArray);
+
+// // GENERIC CLASS
+
+// class Stack<T> {
+//   private items: Array<T> = [];
+
+//   addItem(item: T) {
+//     this.items.push(item);
+//   }
+
+//   getAllItems(): Array<T> {
+//     return this.items;
+//   }
+// }
+
+// let stringStack = new Stack<string>();
+// stringStack.addItem("Monica");
+// stringStack.addItem("Joey");
+// console.log("String Stack : ", stringStack.getAllItems());
+
+// let numberStack = new Stack<number>();
+// numberStack.addItem(99);
+// numberStack.addItem(101);
+// numberStack.addItem(199);
+// console.log("Number Stack : ", numberStack.getAllItems());
+
+// interface ITodo {
+//   label: string;
+//   status: boolean;
+// }
+
+// let todoStack = new Stack<ITodo>();
+// todoStack.addItem({ label: "Planting", status: true });
+// todoStack.addItem({ label: "Insurance", status: false });
+// console.log("Todo Stack : ", todoStack.getAllItems());
+
+// // // GENERIC INTERFACE
+// interface IResource<T, K> {
+//   resourceName: T;
+//   resourceLocation: K;
+// }
+
+// let serverOne: IResource<string, number> = {
+//   resourceName: "Pune",
+//   resourceLocation: 22.1,
+// };
+
+// // GENERIC CONSTRAINTS
+// function getLength<T extends { length: number }>(item: T) {
+//   return item.length;
+// }
+
+// interface IObject {
+//   width: number;
+//   length: number;
+//   volume: number;
+// }
+
+// let obj: IObject = {
+//   width: 8,
+//   length: 10,
+//   volume: 8 * 10,
+// };
+
+// console.log("Object Length : ", getLength<IObject>(obj));
+
+// NAMED EXPORT (ANGULAR FRAMEWORK)
+
+// import { add, square, getMyLuckyNumber } from "./utils/maths";
+import * as maths from "./utils/maths";
+
+import { getRoutine } from "./utils/fortune";
+
+// // DEFAULT EXPORT (REACT LIB)
+import Student from "./utils/fortune";
+
+const joey = new Student("Joey", 23);
+console.log("New Student : ", joey);
+
+const result = maths.add(3, 4);
+console.log("Result : ", result);
+
+const squareOfFour = maths.square(4);
+console.log("Square of Four :", squareOfFour);
+
+console.log("Your lucky number today is " + maths.getMyLuckyNumber() + "!");
+console.log("Your routine for today - ", getRoutine());

@@ -71,14 +71,41 @@
 - Template Literals (``)
 - Block Scoping (let / const)
 - Default Parameter
-- Promises
+- Promises - placeholder for future value
   > then...catch
   > async...await
+  > Promise API - Static Methods
+  - all
+  - allSettled
+  - race
+  - any
+  - resolve
+  - reject
 
 ---
 
 # TypeScript
 
+## Custom Types
+
+- type keyword
+- classes
+- interfaces
+
 ## TypeScript Project
 
 > npm create vite@latest
+> npm run dev
+
+## TypeScript Concepts
+
+- Types in TS
+- Class
+- Generics: function, classes, interfaces
+
+## Decorators
+
+- Classes : @Component(), @Directive(), @Pipe(), @Injectable(), @NgModule()
+- Methods: @HostListener()
+- Properties: @Input(), @Output(), @HostBinding(), @ViewChild()
+- Parameters: @Skip(), @Host(), @Optional()
