@@ -109,3 +109,75 @@
 - Methods: @HostListener()
 - Properties: @Input(), @Output(), @HostBinding(), @ViewChild()
 - Parameters: @Skip(), @Host(), @Optional()
+
+## Modules
+
+- creates local scope
+- avoids global pollution
+- modular approach
+- import / export the functionality
+
+# JavaScript Libraries and Frameworks
+
+- Angular\* (latest): Signals, effects, standalone components, SSR, SSG, Google Team
+
+  > SPA
+  > Form Validation
+  > Template oriented
+  > Components
+  > Moduler Approach
+  > 2 way data binding
+  > DOM Manipulation
+  > State Management
+  > Angular Material Components
+  > Server Side Rendering
+  > MVC Pattern
+  > Animation
+  > Shadow DOM (Smaller part of Actual DOM- DOM Encapsulation)
+  > AoT (Ahead of Time) Compiler (by default): 40% of build size
+  > Tree-shaking : removing unused code from the app; final build with less size
+  > Load faster on UI/Browser
+  > Ivy Renderer
+  > ngcc
+
+- AngularJS (v1.x): Library; 2011
+- React: 35kb, Library, render the UI quickly, Virtual DOM, Diffing Algo, Reconciliation Process, State, Props, Component based architecture, Facebook Team
+
+  > SPA: react-router (20kb)
+  > Form Validation : react-hook-form, formik, joe, superstruct etc
+  > State Management: react-redux
+
+- NextJS : Server-side framework for React App
+- Vue Framework : 'Evan You'. Progressive Framework, template oriented, Virtual DON, Components, State Management, Form Validation, DOM Manipulation, 2 way data binding etc
+- jQuery: Library - DOM Manipulation, AJAX, Animation
+- KnockoutJS Libray: MVVM Pattern; efficient for 2 way data binding
+- BackboneJS Library: MVC Pattern at client side
+- Bootstrap: Responsive Web Development; Components, CSS Classes
+- Stencil: Component based, VDOM
+- Polymer: Rich Web Components
+- D3: Charts
+
+- NodeJS: Server side platform
+- ExpressJS: Server side web application framework
+
+---
+
+# ANGULAR
+
+## Angular CLI Tool
+
+> npm install @angular/cli@17 -g
+> ng version
+> ng new frontend --no-routing --no-standalone
+> cd frontend
+> npm start | ng serve
+
+Angular Workspace -> Multiple Angular Apps / Libraries
+
+### Angular Building Blocks
+
+- Component : ng g c components/users
+- Directive
+- Pipe
+- Service
+- Module
