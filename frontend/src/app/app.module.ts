@@ -7,6 +7,7 @@ import { UsersComponent } from './components/users/users.component';
 import { UserImageComponent } from './components/users/user-image/user-image.component';
 import { UserInfoComponent } from './components/users/user-info/user-info.component';
 import { LifeCycleComponent } from './components/demo/life-cycle/life-cycle.component';
+import { ViewEncapComponent } from './components/demo/view-encap/view-encap.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { LifeCycleComponent } from './components/demo/life-cycle/life-cycle.comp
     UserImageComponent,
     UserInfoComponent,
     LifeCycleComponent,
+    ViewEncapComponent,
   ],
   imports: [
     // Modules: built-in / Custom

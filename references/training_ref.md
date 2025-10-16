@@ -189,3 +189,23 @@ Angular Workspace -> Multiple Angular Apps / Libraries
 - Organism: combo of molecules. eg. Navigation Bar
 - Template: combo of organism. eg. Form
 - Page: a complete page
+
+## Installing Bootstrap
+
+- npm install bootstrap
+- update style property under build option in angular.json
+
+> "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+- Restart Angular Dev Server
+
+## ViewEncapsulation
+
+- Emulated (default): Both Global and Local CSS will be applied but priority given to local CSS rules
+- ShadowDOM : full encapsulation; Global CSS will not affect local template, only Local CSS rules will be applied
+- None: No encapsulation; local CSS will affect other components template as well. Global CSS will be applied
+
+### View Encapsulation Scenerio
+
+- Comp A : ShadowDOM
+- Comp B : None
