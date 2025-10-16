@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IUser } from '../../model/user-model';
 
 @Component({
   selector: 'app-users',
@@ -17,7 +18,7 @@ export class UsersComponent {
     avatar: './assets/images/bill.jpeg',
   };
 
-  onMoreInfo(person: any) {
+  onMoreInfo(person: IUser) {
     alert(`Mr. ${person.lastName} is working with ${person.company}!`);
   }
 

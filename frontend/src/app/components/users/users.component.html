@@ -1,19 +1,15 @@
-<h1>The Users App</h1>
+<div class="container">
+  <h1>The Users App</h1>
 
-<img width="200" height="200" [src]="user.avatar" [alt]="user.firstName" />
-
-<button (click)="onMoreInfo(user)">More Info</button>
-
-<h2>{{ user.firstName }} {{ user.lastName }}</h2>
-
-<p>Date of Birth : <span [innerText]="user.dob"></span></p>
-
-<p>Income : {{ user.income }}</p>
-
-<p>
-  Total Votes : {{ user.votes }}
-  <br />
-
-  <input type="number" [value]="user.votes" (input)="onInput($event)" />
-  <input type="number" [(ngModel)]="user.votes" />
-</p>
+  <div class="row">
+    <div class="col-4">
+      <app-user-image
+        [user]="user"
+        (childEvent)="onMoreInfo($event)"
+      ></app-user-image>
+    </div>
+    <div class="col-8">
+      <app-user-info [user]="user"></app-user-info>
+    </div>
+  </div>
+</div>
