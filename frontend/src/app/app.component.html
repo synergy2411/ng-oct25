@@ -1,3 +1,9 @@
 <h1>App works...</h1>
 
-<app-users></app-users>
+<input type="text" [(ngModel)]="title" />
+
+<button class="btn btn-primary" (click)="toggle = !toggle">Toggle</button>
+
+<app-life-cycle *ngIf="toggle" [title]="title"></app-life-cycle>
+
+<!-- <app-users></app-users> -->

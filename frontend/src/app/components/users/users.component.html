@@ -9,7 +9,17 @@
       ></app-user-image>
     </div>
     <div class="col-8">
-      <app-user-info [user]="user"></app-user-info>
+      <app-user-info [user]="user">
+        <!-- Projected Content -->
+        <input
+          type="number"
+          [value]="user.votes"
+          (input)="onInput($event)"
+          class="input"
+        />
+        <h3 class="heading">This is projected content</h3>
+        <p class="paragraph">Lorem ipsum dolor sit amet.</p>
+      </app-user-info>
     </div>
   </div>
 </div>
