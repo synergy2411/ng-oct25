@@ -181,3 +181,11 @@ Angular Workspace -> Multiple Angular Apps / Libraries
 - Pipe
 - Service
 - Module
+
+## Atomic Design Principle
+
+- Atom : Button, Input field
+- Molecules: combo of atoms. eg. Search Bar - One input field + one button
+- Organism: combo of molecules. eg. Navigation Bar
+- Template: combo of organism. eg. Form
+- Page: a complete page
