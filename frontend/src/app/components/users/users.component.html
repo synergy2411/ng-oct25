@@ -15,8 +15,20 @@
   </div> -->
 
   <ul class="list-group">
-    <li class="list-group-item mb-3" *ngFor="let user of users">
-      <div class="row">
+    <!-- @for (user of users; track $index) { -->
+    <li
+      class="list-group-item mb-3"
+      *ngFor="
+        let user of users;
+        let i = index;
+        let isEven = even;
+        let isOdd = odd;
+        let isFirst = first;
+        let isLast = last
+      "
+      [ngClass]="{ highlight: isFirst }"
+    >
+      <div class="row mb-3">
         <div class="col-4">
           <app-user-image
             [user]="user"
@@ -37,6 +49,13 @@
           </app-user-info>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col">
+          <app-user-comment [comments]="user.comments"></app-user-comment>
+        </div>
+      </div>
     </li>
+    <!-- } -->
   </ul>
 </div>

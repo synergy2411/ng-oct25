@@ -1,0 +1,44 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <button class="nav-link" (click)="tab = 1">Show All Comment</button>
+  </li>
+  <li class="nav-item">
+    <button (click)="tab = 2" class="nav-link">Add New Comment</button>
+  </li>
+</ul>
+
+<div [ngSwitch]="tab">
+  <div *ngSwitchCase="1">
+    <div *ngIf="comments.length !== 0; else noCommentTemplate">
+      <div class="row" *ngFor="let comment of comments">
+        <div class="col-2">
+          <strong>Stars : {{ comment.stars }}</strong>
+        </div>
+        <div class="col">
+          <blockquote>
+            {{ comment.body }}
+            <cite class="float-end">-{{ comment.author }}</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngSwitchCase="2">
+    <h4>Comment Form coming soon...</h4>
+  </div>
+  <div *ngSwitchDefault>Click links to see all comments section</div>
+</div>
+
+<ng-template #noCommentTemplate>
+  <h5>No Comments yet. Be the first to comment for this user.</h5>
+</ng-template>
+
+<!-- @Switch Case Statement -->
+<!--
+@switch (tab) { @case (1) {
+<p>Case 1</p>
+} @case (2) {
+<p>Case 2</p>
+} @default {
+<p>Default Case</p>
+} } -->

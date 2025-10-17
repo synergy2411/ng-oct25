@@ -16,6 +16,7 @@
   [ngClass]="myDynamicClasses"
   (mouseenter)="onChangeClasses()"
   (mouseleave)="onChangeClasses()"
+  *ngIf="user.isWorking; else userNotWorking"
 >
   Income : {{ user.income }}
 </p>
@@ -30,3 +31,14 @@
 </p>
 
 <!-- <ng-content select=".paragraph"></ng-content> -->
+
+<ng-template #userNotWorking>
+  <p>Mr. {{ user.lastName }} is NOT working anymore!</p>
+</ng-template>
+
+<!-- @if Syntax -->
+<!-- @if (user.isWorking) {
+<p>User is working</p>
+} @else {
+<p>User is NOT working</p>
+} -->

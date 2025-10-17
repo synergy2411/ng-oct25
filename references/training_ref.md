@@ -199,6 +199,30 @@ Angular Workspace -> Multiple Angular Apps / Libraries
 
 - Restart Angular Dev Server
 
+## Data Binding
+
+- Property Binding
+- Event Binding
+- Two way data binding (Banana in the box [(ngModel)] - FormsModule )
+
+## Nested Component Communication
+
+- Parent to Child => PB + Input
+- Child to Parent => EB + Output + EventEmitter
+
+## Content Projection: Slot API
+
+## Component Life Cycle
+
+- ngOnChanges
+- ngOnInit
+- ngDoCheck
+- ngAfterContentInit
+- ngAfterContentChecked
+- ngAfterViewInit
+- ngAfterViewChecked
+- ngOnDestroy
+
 ## ViewEncapsulation
 
 - Emulated (default): Both Global and Local CSS will be applied but priority given to local CSS rules
@@ -207,5 +231,5 @@ Angular Workspace -> Multiple Angular Apps / Libraries
 
 ### View Encapsulation Scenerio
 
-- Comp A : ShadowDOM
-- Comp B : None
+- Comp A : ShadowDOM - h1 {color : blue} -> h1 element
+- Comp B : None - h1 {color : green}
