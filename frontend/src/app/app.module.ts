@@ -11,6 +11,9 @@ import { ViewEncapComponent } from './components/demo/view-encap/view-encap.comp
 import { UserCommentComponent } from './components/users/user-comment/user-comment.component';
 import { BetterHighlightDirective } from './directives/better-highlight.directive';
 import { PipeDemoComponent } from './components/demo/pipe-demo/pipe-demo.component';
+import { CoountryCodePipe } from './pipes/coountry-code.pipe';
+import { ReversePipe } from './pipes/reverse.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { PipeDemoComponent } from './components/demo/pipe-demo/pipe-demo.compone
     UserCommentComponent,
     BetterHighlightDirective,
     PipeDemoComponent,
+    CoountryCodePipe,
+    ReversePipe,
+    FilterPipe,
   ],
   imports: [
     // Modules: built-in / Custom

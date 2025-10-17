@@ -233,3 +233,17 @@ Angular Workspace -> Multiple Angular Apps / Libraries
 
 - Comp A : ShadowDOM - h1 {color : blue} -> h1 element
 - Comp B : None - h1 {color : green}
+
+---
+
+# Directive
+
+- ng g d directives/better-highlight
+  > ElementRef : Reference of DOM native Element
+  > Renderer2 : safe environment / browser agnostic way for accessing the DOM Element
+  > @HostListener() : Listens to the events ocuured on the host element
+  > @HostBinding() : binds the host element attribute with the property available in the class
+
+# Pipes
+
+- ng g p pipes/country-code

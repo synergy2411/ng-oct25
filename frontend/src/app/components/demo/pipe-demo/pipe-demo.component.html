@@ -1,13 +1,47 @@
-<h1>Pipe Examples</h1>
+<div class="container">
+  <h1>Pipe Examples</h1>
+  <h4>Custom Pipes</h4>
+  <p>CountryCode Pipe : {{ contactNumber | countryCode : "USA" }}</p>
+  <p>Reverse PIpe : {{ "Hello World" | reverse }}</p>
 
-<p>User name : {{ username | uppercase }}</p>
-<p>User name : {{ username | titlecase }}</p>
-<p>User name : {{ username | lowercase }}</p>
-<hr />
-<p>JSON PIPE : {{ todo | json }}</p>
-<p>Number Pipe : {{ theNumber | number : "2.1-2" }}</p>
-<p>Percent Pipe : {{ theNumber | percent }}</p>
-<p>Curreny Pipe : {{ theNumber | currency : "INR" }}</p>
-<p>Date Pipe : {{ dob | date : "dd/MM/yyyy" }}</p>
+  <div class="row mb-3">
+    <div class="col-6">
+      <div class="d-grid">
+        <button class="btn btn-primary" (click)="onAddTodo()">Add Todo</button>
+      </div>
+    </div>
+    <div class="col-6">
+      <select class="form-control" [(ngModel)]="filteredStatus">
+        <option value="">Show All</option>
+        <option value="pending">Pending</option>
+        <option value="completed">Completed</option>
+      </select>
+    </div>
+  </div>
 
-<p>Async Pipe : {{ promise | async }}</p>
+  <ul class="list-group">
+    <li
+      class="list-group-item mb-2"
+      *ngFor="let todo of todoCollection | filter : filteredStatus"
+    >
+      <p>
+        {{ todo.label | titlecase }}
+        <strong
+          ><span class="float-end"> {{ todo.status }}</span></strong
+        >
+      </p>
+    </li>
+  </ul>
+
+  <hr />
+  <h4>Built-in Pipes</h4>
+  <p>Uppercase Pipe : {{ username | uppercase }}</p>
+  <p>Titlecase Pipe: {{ username | titlecase }}</p>
+  <p>Lowercase Pipe : {{ username | lowercase }}</p>
+  <p>JSON Pipe : {{ todo | json }}</p>
+  <p>Number Pipe : {{ theNumber | number : "2.1-2" }}</p>
+  <p>Percent Pipe : {{ theNumber | percent }}</p>
+  <p>Curreny Pipe : {{ theNumber | currency : "INR" }}</p>
+  <p>Date Pipe : {{ dob | date : "dd/MM/yyyy" }}</p>
+  <p>Async Pipe : {{ promise | async }}</p>
+</div>

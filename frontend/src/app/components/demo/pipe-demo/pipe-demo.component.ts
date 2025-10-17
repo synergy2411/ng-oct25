@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './pipe-demo.component.css',
 })
 export class PipeDemoComponent {
+  contactNumber = 9876543210;
+
   username = 'john doe';
 
   theNumber = 123456.789;
@@ -23,4 +25,17 @@ export class PipeDemoComponent {
       resolve('This string is delivered asynchronously');
     }, 2000);
   });
+
+  todoCollection = [
+    { label: 'shopping', status: 'pending' },
+    { label: 'planting', status: 'completed' },
+    { label: 'insurance', status: 'pending' },
+    { label: 'grocery', status: 'completed' },
+  ];
+
+  filteredStatus = '';
+
+  onAddTodo() {
+    this.todoCollection.push({ label: 'New Todo', status: 'pending' });
+  }
 }
