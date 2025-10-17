@@ -9,10 +9,10 @@ import { USER_DATA } from '../../model/mocks';
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class UsersComponent implements OnInit {
-  user!: IUser;
+  users!: Array<IUser>;
 
   ngOnInit(): void {
-    this.user = USER_DATA;
+    this.users = USER_DATA;
   }
 
   onMoreInfo(person: IUser) {
@@ -20,6 +20,6 @@ export class UsersComponent implements OnInit {
   }
 
   onInput(event: any) {
-    this.user.votes = event.target.value;
+    // this.user.votes = event.target.value;
   }
 }

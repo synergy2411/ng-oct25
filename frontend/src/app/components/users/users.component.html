@@ -1,25 +1,42 @@
 <div class="container">
   <h1>The Users App</h1>
 
-  <div class="row">
-    <div class="col-4">
-      <app-user-image
-        [user]="user"
-        (childEvent)="onMoreInfo($event)"
-      ></app-user-image>
+  <!-- <div class="row">
+    <div class="col-4" *ngFor="let user of users">
+      <div class="card">
+        <img class="card-img-top" [src]="user.avatar" alt="Title" />
+        <div class="card-body">
+          <h4 class="card-title">{{ user.firstName }} {{ user.lastName }}</h4>
+          <p class="card-text">Date of Birth : {{ user.dob }}</p>
+          <p class="card-text">Income : {{ user.income }}</p>
+        </div>
+      </div>
     </div>
-    <div class="col-8">
-      <app-user-info [user]="user">
-        <!-- Projected Content -->
-        <input
-          type="number"
-          [value]="user.votes"
-          (input)="onInput($event)"
-          class="input"
-        />
-        <h3 class="heading">This is projected content</h3>
-        <p class="paragraph">Lorem ipsum dolor sit amet.</p>
-      </app-user-info>
-    </div>
-  </div>
+  </div> -->
+
+  <ul class="list-group">
+    <li class="list-group-item mb-3" *ngFor="let user of users">
+      <div class="row">
+        <div class="col-4">
+          <app-user-image
+            [user]="user"
+            (childEvent)="onMoreInfo($event)"
+          ></app-user-image>
+        </div>
+        <div class="col-8">
+          <app-user-info [user]="user">
+            <!-- Projected Content -->
+            <input
+              type="number"
+              [value]="user.votes"
+              (input)="onInput($event)"
+              class="input"
+            />
+            <h3 class="heading">This is projected content</h3>
+            <p class="paragraph">Lorem ipsum dolor sit amet.</p>
+          </app-user-info>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
