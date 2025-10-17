@@ -1,11 +1,24 @@
 <!-- ng-content - Creates the Slot inside the child comp template -->
 <!-- <ng-content select=".heading"></ng-content> -->
 
-<h2>{{ user.firstName }} {{ user.lastName }}</h2>
+<h2
+  [ngStyle]="myDynamicStyle"
+  (mouseenter)="onChangeStyle()"
+  (mouseleave)="onChangeStyle()"
+>
+  {{ user.firstName }} {{ user.lastName }}
+</h2>
 
 <p>Date of Birth : <span [innerText]="user.dob"></span></p>
 
-<p>Income : {{ user.income }}</p>
+<!-- <p [ngClass]="['my-feature', 'my-border']">Income : {{ user.income }}</p> -->
+<p
+  [ngClass]="myDynamicClasses"
+  (mouseenter)="onChangeClasses()"
+  (mouseleave)="onChangeClasses()"
+>
+  Income : {{ user.income }}
+</p>
 
 <p>
   Total Votes : {{ user.votes }}
