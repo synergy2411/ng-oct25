@@ -10,6 +10,7 @@ import { LifeCycleComponent } from './components/demo/life-cycle/life-cycle.comp
 import { ViewEncapComponent } from './components/demo/view-encap/view-encap.component';
 import { UserCommentComponent } from './components/users/user-comment/user-comment.component';
 import { BetterHighlightDirective } from './directives/better-highlight.directive';
+import { PipeDemoComponent } from './components/demo/pipe-demo/pipe-demo.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { BetterHighlightDirective } from './directives/better-highlight.directiv
     ViewEncapComponent,
     UserCommentComponent,
     BetterHighlightDirective,
+    PipeDemoComponent,
   ],
   imports: [
     // Modules: built-in / Custom

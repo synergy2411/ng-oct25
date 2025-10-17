@@ -1,0 +1,13 @@
+<h1>Pipe Examples</h1>
+
+<p>User name : {{ username | uppercase }}</p>
+<p>User name : {{ username | titlecase }}</p>
+<p>User name : {{ username | lowercase }}</p>
+<hr />
+<p>JSON PIPE : {{ todo | json }}</p>
+<p>Number Pipe : {{ theNumber | number : "2.1-2" }}</p>
+<p>Percent Pipe : {{ theNumber | percent }}</p>
+<p>Curreny Pipe : {{ theNumber | currency : "INR" }}</p>
+<p>Date Pipe : {{ dob | date : "dd/MM/yyyy" }}</p>
+
+<p>Async Pipe : {{ promise | async }}</p>
