@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {
+  AbstractControl,
   FormBuilder,
   FormControl,
   FormGroup,
+  ValidationErrors,
   Validators,
 } from '@angular/forms';
 
@@ -22,12 +24,29 @@ export class RegisterComponent implements OnInit {
       password: new FormControl('', [
         Validators.required,
         Validators.minLength(6),
+        RegisterComponent.hasExclamationValidator,
       ]),
+      cnfPassword: new FormControl('', [Validators.required]),
     });
   }
 
   get username() {
     return this.theForm.controls['username'] as FormControl;
+  }
+
+  get password() {
+    return this.theForm.controls['password'] as FormControl;
+  }
+
+  get cnfPassword() {
+    return this.theForm.controls['cnfPassword'] as FormControl;
+  }
+
+  static hasExclamationValidator(
+    control: AbstractControl
+  ): ValidationErrors | null {
+    const hasExclamation = control.value.indexOf('!') >= 0;
+    return hasExclamation ? null : { exclamation: true };
   }
 
   onSubmit() {
