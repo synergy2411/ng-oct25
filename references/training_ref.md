@@ -278,3 +278,17 @@ friends = ["Monica", "Ross", "Rachel", "Chandler"] // Pure Change
 - Static Form
 
 ## Model Driven Form / Reactive Form
+
+- Angular State and CSS Classes
+- Synchronous Form
+- Validations are imposed on class model
+- Easy to Test
+- Custom validators
+- Suitable for dynamic forms
+- Angular Validations
+
+### More Form Elements to look for-
+
+- Radio Buttons
+- Checkboxes
+- Drop down
