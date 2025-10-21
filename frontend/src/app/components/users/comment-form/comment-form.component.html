@@ -1,8 +1,8 @@
-<form>
+<form (ngSubmit)="onSumbit(commentForm)" #commentForm="ngForm">
   <!-- stars -->
   <div class="mb-3">
     <label for="" class="form-label">Stars</label>
-    <select class="form-select form-select-sm" name="stars">
+    <select class="form-select form-select-sm" name="stars" ngModel>
       <option selected>Select one</option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -15,22 +15,41 @@
   <!-- body -->
   <div class="mb-3">
     <label for="" class="form-label">Write your message here</label>
-    <textarea class="form-control" name="body" rows="3"></textarea>
+    <textarea
+      class="form-control"
+      rows="3"
+      name="body"
+      ngModel
+      minlength="6"
+      required
+    ></textarea>
   </div>
 
   <!-- author -->
-
   <div class="form-floating mb-3">
-    <input type="text" class="form-control" name="author" placeholder="" />
+    <input
+      type="email"
+      class="form-control"
+      name="author"
+      ngModel
+      placeholder=""
+      email
+      required
+    />
     <label for="formId1">Your name</label>
   </div>
 
   <!-- buttons -->
-
   <div class="row">
     <div class="col">
       <div class="d-grid">
-        <button class="btn btn-primary">Add Comment</button>
+        <button
+          [disabled]="!commentForm.valid"
+          class="btn btn-primary"
+          type="submit"
+        >
+          Add Comment
+        </button>
       </div>
     </div>
     <div class="col">

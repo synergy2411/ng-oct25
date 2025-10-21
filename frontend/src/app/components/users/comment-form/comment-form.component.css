@@ -1,0 +1,15 @@
+.ng-dirty.ng-invalid[name="body"] {
+  border-left: 3px red solid;
+}
+
+.ng-dirty.ng-valid[name="body"] {
+  border-left: 3px green solid;
+}
+
+.ng-dirty.ng-invalid[name="author"] {
+  border-left: 3px red solid;
+}
+
+.ng-dirty.ng-valid[name="author"] {
+  border-left: 3px green solid;
+}
