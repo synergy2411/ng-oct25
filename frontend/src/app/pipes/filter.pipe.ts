@@ -7,12 +7,15 @@ interface ITodo {
 
 @Pipe({
   name: 'filter',
+  pure: false,
 })
 export class FilterPipe implements PipeTransform {
   transform(
     todoCollection: Array<ITodo>,
     filteredStatus: string
   ): Array<ITodo> {
+    console.log('[TRANSFORM]');
+
     if (filteredStatus === '') {
       return todoCollection;
     }
@@ -26,3 +29,5 @@ export class FilterPipe implements PipeTransform {
     return resultArray;
   }
 }
+
+// Create a pipe for Sorting -> desc / asc

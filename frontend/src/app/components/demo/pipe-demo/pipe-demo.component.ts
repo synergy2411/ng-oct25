@@ -36,6 +36,13 @@ export class PipeDemoComponent {
   filteredStatus = '';
 
   onAddTodo() {
+    // Impure Change
     this.todoCollection.push({ label: 'New Todo', status: 'pending' });
+
+    // Pure Change
+    // this.todoCollection = [
+    //   { label: 'New Item', status: 'pending' },
+    //   ...this.todoCollection,
+    // ];
   }
 }

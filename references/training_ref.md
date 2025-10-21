@@ -236,7 +236,11 @@ Angular Workspace -> Multiple Angular Apps / Libraries
 
 ---
 
-# Directive
+# Directive - markers available on UI
+
+- Component
+- Structural: *ngFor, *ngIf, \*ngSwitch / @for, @if, @switch
+- Attributes: ngStyle, ngClass
 
 - ng g d directives/better-highlight
   > ElementRef : Reference of DOM native Element
@@ -244,6 +248,20 @@ Angular Workspace -> Multiple Angular Apps / Libraries
   > @HostListener() : Listens to the events ocuured on the host element
   > @HostBinding() : binds the host element attribute with the property available in the class
 
-# Pipes
+# Pipes: format the UI
 
 - ng g p pipes/country-code
+
+## Pure and Impure Pipe
+
+let user = { name : "Monica" }
+
+user.name = "Joey" // Impure Change
+
+user = { name : "Rachel" } // Pure Change
+
+let friends = ["Monica", "Ross", "Rachel"]
+
+frineds.push("Chandler") // Impure Change
+
+friends = ["Monica", "Ross", "Rachel", "Chandler"] // Pure Change
