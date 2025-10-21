@@ -14,8 +14,6 @@ export class FilterPipe implements PipeTransform {
     todoCollection: Array<ITodo>,
     filteredStatus: string
   ): Array<ITodo> {
-    console.log('[TRANSFORM]');
-
     if (filteredStatus === '') {
       return todoCollection;
     }
