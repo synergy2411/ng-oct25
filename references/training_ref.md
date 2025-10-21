@@ -265,3 +265,16 @@ let friends = ["Monica", "Ross", "Rachel"]
 frineds.push("Chandler") // Impure Change
 
 friends = ["Monica", "Ross", "Rachel", "Chandler"] // Pure Change
+
+# Forms
+
+## Template Driven Form
+
+- Loaded asynchronously
+- Vanilla HTML5 validation
+- Validation are imposed inside template
+- Suitable for small / mid-size forms
+- Hard to test
+- Static Form
+
+## Model Driven Form / Reactive Form

@@ -70,6 +70,59 @@
               formControlName="cnfPassword"
             />
             <label for="cnfPassword">Confirm Password</label>
+
+            <!-- Error Message -->
+
+            <div *ngIf="cnfPassword.touched && cnfPassword.invalid">
+              <div *ngIf="cnfPassword.hasError('required')">
+                <p class="text-danger">Confirm password is mandatory field</p>
+              </div>
+              <div *ngIf="cnfPassword.hasError('mismatch')">
+                <p class="text-danger">
+                  Password and Confirm password does not match
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hobbies -->
+
+          <button class="btn btn-info btn-sm mb-3" (click)="addNewHobby()">
+            New Hobby
+          </button>
+          <div formArrayName="hobbies">
+            <div
+              *ngFor="let hobby of hobbies.controls; let i = index"
+              [formGroupName]="i"
+              class="mb-2"
+            >
+              <div class="row">
+                <div class="col-5">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    class="form-control"
+                    formControlName="name"
+                  />
+                </div>
+                <div class="col-5">
+                  <input
+                    type="text"
+                    placeholder="Frequency"
+                    class="form-control"
+                    formControlName="frequency"
+                  />
+                </div>
+                <div class="col-2">
+                  <button
+                    class="btn btn-outline-danger btn-sm"
+                    (click)="removeHobby(i)"
+                  >
+                    🗑️
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- buttons -->
