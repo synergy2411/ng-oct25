@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { IComment } from '../../../model/comment-model';
 
 @Component({
   selector: 'app-comment-form',
@@ -7,7 +8,9 @@ import { NgForm } from '@angular/forms';
   styleUrl: './comment-form.component.css',
 })
 export class CommentFormComponent {
+  @Output() commentEvent = new EventEmitter<IComment>();
+
   onSumbit(form: NgForm) {
-    console.log(form);
+    this.commentEvent.emit(form.value);
   }
 }

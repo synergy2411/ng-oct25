@@ -23,6 +23,24 @@
       minlength="6"
       required
     ></textarea>
+
+    <!-- Error Messages -->
+    <div
+      *ngIf="
+        commentForm.controls['body']?.touched &&
+        commentForm.controls['body']?.invalid
+      "
+    >
+      <div *ngIf="commentForm.controls['body'].hasError('required')">
+        <p class="text-danger">Please write some message in the text field</p>
+      </div>
+
+      <div *ngIf="commentForm.controls['body'].hasError('minlength')">
+        <p class="text-danger">
+          Please write at least 6 characters in this field
+        </p>
+      </div>
+    </div>
   </div>
 
   <!-- author -->
@@ -37,6 +55,22 @@
       required
     />
     <label for="formId1">Your name</label>
+
+    <!-- Error Message -->
+    <div
+      *ngIf="
+        commentForm.controls['author']?.touched &&
+        commentForm.controls['author']?.invalid
+      "
+    >
+      <div *ngIf="commentForm.controls['author'].hasError('required')">
+        <p class="text-danger">Author field is mandatory.</p>
+      </div>
+
+      <div *ngIf="commentForm.controls['author'].hasError('email')">
+        <p class="text-danger">Author field should have proper email format.</p>
+      </div>
+    </div>
   </div>
 
   <!-- buttons -->

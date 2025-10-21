@@ -10,4 +10,9 @@ export class UserCommentComponent {
   @Input() comments!: Array<IComment>;
 
   tab = 0;
+
+  onAddNewComment(comment: IComment) {
+    this.comments.push(comment);
+    this.tab = 1;
+  }
 }

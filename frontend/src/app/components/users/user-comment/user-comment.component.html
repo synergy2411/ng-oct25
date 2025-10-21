@@ -24,7 +24,9 @@
     </div>
   </div>
   <div *ngSwitchCase="2">
-    <app-comment-form></app-comment-form>
+    <app-comment-form
+      (commentEvent)="onAddNewComment($event)"
+    ></app-comment-form>
   </div>
   <div *ngSwitchDefault>Click links to see all comments section</div>
 </div>
