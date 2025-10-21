@@ -11,6 +11,6 @@ export class CommentFormComponent {
   @Output() commentEvent = new EventEmitter<IComment>();
 
   onSumbit(form: NgForm) {
-    this.commentEvent.emit(form.value);
+    this.commentEvent.emit(form.value); // stars, body, author
   }
 }
