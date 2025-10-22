@@ -544,14 +544,14 @@
     </mxGraphModel>
   </diagram>
   <diagram id="95pB6HRkj_fEDnbahK17" name="Page-8">
-    <mxGraphModel dx="469" dy="264" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="963" dy="543" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="w2EJJ-XiTC9nTUwElxNd-1" value="Dependency Injection Modifiers" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
           <mxGeometry x="375" y="50" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="w2EJJ-XiTC9nTUwElxNd-2" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Modifiers : changes default DI behaviour&lt;/h1&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- @Self()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- @SkipSelf()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- @Host()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- @Optional()&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="w2EJJ-XiTC9nTUwElxNd-2" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Modifiers : changes default DI behaviour&lt;/h1&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- @Self(): search only for current component. Don&#39;t look for any upward component/module&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- @SkipSelf(): skips current component to search for service registration&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- @Host(): search only self component as well as parent component. No further lookup needed.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- @Optional(): makes the service optional. Avoids Null Injector Error by making service as optional&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="140" y="140" width="540" height="260" as="geometry" />
         </mxCell>
       </root>

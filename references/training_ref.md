@@ -326,3 +326,26 @@ friends = ["Monica", "Ross", "Rachel", "Chandler"] // Pure Change
 - @SkipSelf(): skips current component to search for service registration
 - @Host(): search only self component as well as parent component. No further lookup needed.
 - @Optional(): makes the service optional. Avoids Null Injector Error by making service as optional
+
+# RxJS
+
+rxjs.dev
+
+## Observables
+
+- series of events
+- Lazy in nature (unless consume)
+- Both Async and Sync
+- Powerful operators support
+- Can be cancelled
+- Stream of events
+- subscribe() to consume
+
+## Promise
+
+- One shot (Resolve / Reject)
+- Eagerly executed
+- Always async
+- No Operators
+- Can't be cancelled
+- then()...catch() / async...await to consume
