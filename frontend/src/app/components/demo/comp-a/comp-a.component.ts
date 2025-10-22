@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Optional } from '@angular/core';
 import { CounterService } from '../../../services/counter.service';
 
 @Component({
@@ -7,5 +7,5 @@ import { CounterService } from '../../../services/counter.service';
   styleUrl: './comp-a.component.css',
 })
 export class CompAComponent {
-  constructor(public counterService: CounterService) {}
+  constructor(@Optional() public counterService: CounterService) {}
 }

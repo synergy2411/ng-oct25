@@ -5,7 +5,7 @@ import { CounterService } from './services/counter.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  providers: [CounterService],
+  // providers: [CounterService],
 })
 export class AppComponent {
   title = 'frontend';

@@ -319,3 +319,10 @@ friends = ["Monica", "Ross", "Rachel", "Chandler"] // Pure Change
 
 - Root Module: All components alongwith all services will receive the same singleton instance
 - Component Level: Same component as well as all the nested children component will receive the same singleton instance
+
+### DI Modifiers - changes default DI behaviour
+
+- @Self(): search only for current component. Don't look for any upward component/module
+- @SkipSelf(): skips current component to search for service registration
+- @Host(): search only self component as well as parent component. No further lookup needed.
+- @Optional(): makes the service optional. Avoids Null Injector Error by making service as optional
