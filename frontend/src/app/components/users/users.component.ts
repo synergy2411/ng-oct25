@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { IUser } from '../../model/user-model';
-import { USER_DATA } from '../../model/mocks';
 import { DataService } from '../../services/data.service';
 
 @Component({
@@ -8,6 +7,7 @@ import { DataService } from '../../services/data.service';
   templateUrl: './users.component.html',
   styleUrl: './users.component.css',
   encapsulation: ViewEncapsulation.Emulated,
+  // providers: [DataService],
 })
 export class UsersComponent implements OnInit {
   users!: Array<IUser>;

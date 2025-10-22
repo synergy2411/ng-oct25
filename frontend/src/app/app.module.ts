@@ -16,6 +16,9 @@ import { ReversePipe } from './pipes/reverse.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { CommentFormComponent } from './components/users/comment-form/comment-form.component';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { DataService } from './services/data.service';
+import { CompAComponent } from './components/demo/comp-a/comp-a.component';
+import { CompBComponent } from './components/demo/comp-b/comp-b.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,8 @@ import { RegisterComponent } from './components/auth/register/register.component
     FilterPipe,
     CommentFormComponent,
     RegisterComponent,
+    CompAComponent,
+    CompBComponent,
   ],
   imports: [
     // Modules: built-in / Custom
@@ -41,7 +46,7 @@ import { RegisterComponent } from './components/auth/register/register.component
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [], // Service
+  providers: [DataService], // Service
   bootstrap: [AppComponent],
 })
 export class AppModule {}

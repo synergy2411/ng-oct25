@@ -298,3 +298,24 @@ friends = ["Monica", "Ross", "Rachel", "Chandler"] // Pure Change
 - Radio Buttons
 - Checkboxes
 - Drop down
+
+# Services
+
+- ng g s services/data
+
+## Tree-shaking
+
+- Removing the unused code from the final build
+- Reduce the final build size
+- Bootstrap app quickly in the browser
+
+### ProvideIn Values - Self-registration of Service
+
+- root : Root of the App. Singleton instance will be available throughout the app
+- platform : Apps running under the same platform will share the same singleton service instance
+- any : Lazy loaded modules
+
+### DI Injector Tree
+
+- Root Module: All components alongwith all services will receive the same singleton instance
+- Component Level: Same component as well as all the nested children component will receive the same singleton instance

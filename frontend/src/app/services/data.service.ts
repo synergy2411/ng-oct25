@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { USER_DATA } from '../model/mocks';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class DataService {
   constructor() {}
 
@@ -11,3 +9,6 @@ export class DataService {
     return USER_DATA;
   }
 }
+
+// Tree-shaking:
+// DI Tree / Hierarchical Injector
