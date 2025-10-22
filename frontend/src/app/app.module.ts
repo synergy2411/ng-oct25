@@ -19,6 +19,7 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { DataService } from './services/data.service';
 import { CompAComponent } from './components/demo/comp-a/comp-a.component';
 import { CompBComponent } from './components/demo/comp-b/comp-b.component';
+import { RxjsObservableComponent } from './components/demo/rxjs-observable/rxjs-observable.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { CompBComponent } from './components/demo/comp-b/comp-b.component';
     RegisterComponent,
     CompAComponent,
     CompBComponent,
+    RxjsObservableComponent,
   ],
   imports: [
     // Modules: built-in / Custom
