@@ -287,6 +287,12 @@ friends = ["Monica", "Ross", "Rachel", "Chandler"] // Pure Change
 - Suitable for dynamic forms
 - Angular Validations
 
+## Form State and CSS Classes
+
+- ngTouched / ngUntouched
+- ngPristine / ngDirty
+- ngValid / ngInvalid
+
 ### More Form Elements to look for-
 
 - Radio Buttons

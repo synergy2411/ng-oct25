@@ -17,6 +17,8 @@ import {
 export class RegisterComponent implements OnInit {
   theForm!: FormGroup;
 
+  countries = ['india', 'us', 'singapore', 'australia', 'poland'];
+
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
@@ -33,6 +35,7 @@ export class RegisterComponent implements OnInit {
           // RegisterComponent.passwordMatchValidator,
         ]),
         hobbies: this.fb.array([]),
+        country: new FormControl(),
       },
       {
         validators: RegisterComponent.formGroupLevelPasswordMismatchValidator,
@@ -54,6 +57,10 @@ export class RegisterComponent implements OnInit {
 
   get hobbies() {
     return this.theForm.get('hobbies') as FormArray;
+  }
+
+  get country() {
+    return this.theForm.get('country') as FormControl;
   }
 
   addNewHobby() {

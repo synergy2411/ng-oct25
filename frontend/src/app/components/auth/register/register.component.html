@@ -125,6 +125,23 @@
             </div>
           </div>
 
+          <!-- Countries -->
+
+          <div class="mb-3">
+            <label for="" class="form-label">Country</label>
+            <select
+              class="form-select form-select-sm"
+              name="country"
+              id=""
+              formControlName="country"
+            >
+              <option selected>Select one</option>
+              <option [value]="country" *ngFor="let country of countries">
+                {{ country | titlecase }}
+              </option>
+            </select>
+          </div>
+
           <!-- buttons -->
           <div class="row">
             <div class="col">
