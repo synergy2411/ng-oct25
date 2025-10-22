@@ -1,6 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
+  AsyncSubject,
+  BehaviorSubject,
   Observable,
+  ReplaySubject,
+  Subject,
   Subscription,
   filter,
   from,
@@ -8,6 +12,8 @@ import {
   map,
   range,
   take,
+  takeUntil,
+  takeWhile,
   tap,
 } from 'rxjs';
 
@@ -58,6 +64,7 @@ export class RxjsObservableComponent {
         filter((val) => val % 2 == 0),
         map((val) => val ** 2),
         take(5)
+        // takeWhile((val) => val < 100)
       )
       .subscribe(
         (data) => console.log(data),
@@ -84,4 +91,37 @@ export class RxjsObservableComponent {
       )
       .subscribe(console.log);
   }
+
+  // SUBJECTS: are both observer (next, error, complete) as well as observable(pipe, subscribe)
+  // - Multi-casted
+
+  onSubjectSubs() {
+    // let subject = new Subject();
+    // let subject = new BehaviorSubject(101); // seed value
+    // let subject = new ReplaySubject(3); // replays last n number of emission
+    let subject = new AsyncSubject(); // last emitted value upon completion
+
+    subject.next(99);
+    subject.next(102);
+
+    subject.subscribe((data) => console.log('Subs 1: ', data));
+
+    subject.next(103);
+
+    subject.subscribe((data) => console.log('Subs 2: ', data));
+
+    subject.next(104);
+
+    subject.subscribe((data) => console.log('Subs 3: ', data));
+
+    subject.next(105);
+
+    subject.complete();
+  }
 }
+
+// Subs 1 - 99, 102, 103, 104, 105
+
+// Subs 2 - 99, 102, 103, 104, 105
+
+// Subs 3 - 102, 103, 104, 105
