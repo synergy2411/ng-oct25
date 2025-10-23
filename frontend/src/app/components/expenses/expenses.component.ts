@@ -19,11 +19,13 @@ export class ExpensesComponent implements OnInit {
   constructor(private expenseService: ExpenseService) {}
 
   ngOnInit(): void {
+    // READ OPERATION
     this.expenseService
       .fetchAll()
       .subscribe((expenses) => (this.allExpenses = expenses));
   }
 
+  // CREATE OPERATION
   onAddNewExpense(expense: IExpense) {
     this.expenseService.create(expense).subscribe((createdExpense) => {
       this.allExpenses = [createdExpense, ...this.allExpenses];
@@ -36,6 +38,7 @@ export class ExpensesComponent implements OnInit {
     this.isSelectedExpense = false;
   }
 
+  // DELETE OPERATION
   onDeleteExpense(expenseId: string) {
     this.expenseService.remove(expenseId).subscribe(() => {
       const position = this.allExpenses.findIndex(
@@ -50,6 +53,7 @@ export class ExpensesComponent implements OnInit {
     this.isSelectedExpense = true;
   }
 
+  // UPDATE OPERATION
   onUpdateExpense(expense: IExpense) {
     this.expenseService
       .update(this.selectedExpense.id, expense)

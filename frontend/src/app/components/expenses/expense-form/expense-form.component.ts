@@ -27,7 +27,7 @@ export class ExpenseFormComponent implements OnInit {
   ngOnInit(): void {
     if (this.expense) {
       this.expenseForm.patchValue({
-        ...this.expense,
+        ...this.expense, // title, amount, createdAt
       });
     }
   }
