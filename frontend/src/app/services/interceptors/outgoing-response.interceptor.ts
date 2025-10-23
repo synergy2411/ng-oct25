@@ -9,7 +9,7 @@ import { Injectable } from '@angular/core';
 import { catchError, Observable, tap, throwError } from 'rxjs';
 
 @Injectable()
-export class OutgoingResponseInterceptor implements HttpInterceptor {
+export class IncomingResponseInterceptor implements HttpInterceptor {
   intercept(
     req: HttpRequest<any>,
     next: HttpHandler

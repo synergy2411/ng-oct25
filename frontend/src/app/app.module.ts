@@ -1,33 +1,32 @@
-import { ErrorHandler, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { ErrorHandler, NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { UsersComponent } from './components/users/users.component';
-import { UserImageComponent } from './components/users/user-image/user-image.component';
-import { UserInfoComponent } from './components/users/user-info/user-info.component';
-import { LifeCycleComponent } from './components/demo/life-cycle/life-cycle.component';
-import { ViewEncapComponent } from './components/demo/view-encap/view-encap.component';
-import { UserCommentComponent } from './components/users/user-comment/user-comment.component';
-import { BetterHighlightDirective } from './directives/better-highlight.directive';
-import { PipeDemoComponent } from './components/demo/pipe-demo/pipe-demo.component';
-import { CoountryCodePipe } from './pipes/coountry-code.pipe';
-import { ReversePipe } from './pipes/reverse.pipe';
-import { FilterPipe } from './pipes/filter.pipe';
-import { CommentFormComponent } from './components/users/comment-form/comment-form.component';
 import { RegisterComponent } from './components/auth/register/register.component';
-import { DataService } from './services/data.service';
 import { CompAComponent } from './components/demo/comp-a/comp-a.component';
 import { CompBComponent } from './components/demo/comp-b/comp-b.component';
+import { LifeCycleComponent } from './components/demo/life-cycle/life-cycle.component';
+import { PipeDemoComponent } from './components/demo/pipe-demo/pipe-demo.component';
 import { RxjsObservableComponent } from './components/demo/rxjs-observable/rxjs-observable.component';
-import { CommonModule } from '@angular/common';
-import { ExpensesComponent } from './components/expenses/expenses.component';
-import { ExpenseItemComponent } from './components/expenses/expense-item/expense-item.component';
+import { ViewEncapComponent } from './components/demo/view-encap/view-encap.component';
 import { ExpenseFormComponent } from './components/expenses/expense-form/expense-form.component';
-import { LoggerInterceptor } from './services/interceptors/logger.interceptor';
-import { OutgoingResponseInterceptor } from './services/interceptors/outgoing-response.interceptor';
+import { ExpenseItemComponent } from './components/expenses/expense-item/expense-item.component';
+import { ExpensesComponent } from './components/expenses/expenses.component';
+import { CommentFormComponent } from './components/users/comment-form/comment-form.component';
+import { UserCommentComponent } from './components/users/user-comment/user-comment.component';
+import { UserImageComponent } from './components/users/user-image/user-image.component';
+import { UserInfoComponent } from './components/users/user-info/user-info.component';
+import { UsersComponent } from './components/users/users.component';
+import { BetterHighlightDirective } from './directives/better-highlight.directive';
+import { CoountryCodePipe } from './pipes/coountry-code.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
+import { ReversePipe } from './pipes/reverse.pipe';
+import { DataService } from './services/data.service';
 import { GlobalErrorHandlerService } from './services/global-error-handler.service';
+import { LoggerInterceptor } from './services/interceptors/logger.interceptor';
+import { IncomingResponseInterceptor } from './services/interceptors/outgoing-response.interceptor';
 
 @NgModule({
   declarations: [
@@ -69,7 +68,7 @@ import { GlobalErrorHandlerService } from './services/global-error-handler.servi
     },
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: OutgoingResponseInterceptor,
+      useClass: IncomingResponseInterceptor,
       multi: true,
     },
     {
