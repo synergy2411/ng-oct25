@@ -24,6 +24,7 @@ import { RxjsObservableComponent } from './components/demo/rxjs-observable/rxjs-
 import { CommonModule } from '@angular/common';
 import { ExpensesComponent } from './components/expenses/expenses.component';
 import { ExpenseItemComponent } from './components/expenses/expense-item/expense-item.component';
+import { ExpenseFormComponent } from './components/expenses/expense-form/expense-form.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ExpenseItemComponent } from './components/expenses/expense-item/expense
     RxjsObservableComponent,
     ExpensesComponent,
     ExpenseItemComponent,
+    ExpenseFormComponent,
   ],
   imports: [
     // Modules: built-in / Custom

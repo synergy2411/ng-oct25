@@ -10,6 +10,8 @@ import { IExpense } from '../../model/expense-model';
 export class ExpensesComponent implements OnInit {
   allExpenses!: Array<IExpense>;
 
+  showExpenseForm = false;
+
   constructor(private expenseService: ExpenseService) {}
 
   ngOnInit(): void {

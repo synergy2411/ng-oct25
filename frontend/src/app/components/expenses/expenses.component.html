@@ -1,6 +1,23 @@
 <div class="container">
   <h1 class="text-center">My Expenses</h1>
 
+  <!-- CREATE NEW EXPENSE -->
+  <div class="row mb-4">
+    <div class="offset-4 col-4">
+      <div class="d-grid">
+        <button
+          class="btn btn-primary"
+          (click)="showExpenseForm = !showExpenseForm"
+        >
+          {{ showExpenseForm ? "Hide Form" : "Create Expense" }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <app-expense-form *ngIf="showExpenseForm"></app-expense-form>
+
+  <!-- DISPLAY ALL THE EXPENSES -->
   <div class="row">
     <div class="col-4" *ngFor="let expense of allExpenses">
       <app-expense-item [expense]="expense"></app-expense-item>
