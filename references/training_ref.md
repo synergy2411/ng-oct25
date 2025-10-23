@@ -299,7 +299,10 @@ friends = ["Monica", "Ross", "Rachel", "Chandler"] // Pure Change
 - Checkboxes
 - Drop down
 
-# Services
+# Services : Injectable / DI
+
+- DIP: Dependency Injection Principle
+- SRP: Single Responsibility Principle
 
 - ng g s services/data
 
@@ -349,3 +352,20 @@ rxjs.dev
 - No Operators
 - Can't be cancelled
 - then()...catch() / async...await to consume
+
+### Subjects
+
+- Both Observer and Observable
+- Multi-casted / Multiple subscriber
+
+#### Types of Subject
+
+> BehaviorSubject : Initial value is supplied. Last emitted value becomes the seed value for the subsequent subscriber
+> ReplaySubject: replays n number of last emitted events
+> AsyncSubject: last emitted value upon completion
+
+# JSON-SERVER
+
+- [sudo] npm install -g json-server@0.17.4
+- Create db.json file
+- json-server --watch db.json

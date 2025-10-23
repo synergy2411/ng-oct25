@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
@@ -20,6 +21,8 @@ import { DataService } from './services/data.service';
 import { CompAComponent } from './components/demo/comp-a/comp-a.component';
 import { CompBComponent } from './components/demo/comp-b/comp-b.component';
 import { RxjsObservableComponent } from './components/demo/rxjs-observable/rxjs-observable.component';
+import { CommonModule } from '@angular/common';
+import { ExpensesComponent } from './components/expenses/expenses.component';
 
 @NgModule({
   declarations: [
@@ -41,12 +44,14 @@ import { RxjsObservableComponent } from './components/demo/rxjs-observable/rxjs-
     CompAComponent,
     CompBComponent,
     RxjsObservableComponent,
+    ExpensesComponent,
   ],
   imports: [
     // Modules: built-in / Custom
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [DataService], // Service
   bootstrap: [AppComponent],

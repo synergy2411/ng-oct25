@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.2.7" pages="8">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.2.7" pages="9">
   <diagram name="Page-1" id="ks7lsYurKxmiqmLs9bYA">
-    <mxGraphModel dx="578" dy="326" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1020" dy="575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -106,7 +106,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="uxOu6vJMyunOhVNV7N8A" name="Page-3">
-    <mxGraphModel dx="723" dy="408" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1020" dy="575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -145,7 +145,7 @@
           <mxGeometry x="385" y="310" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="oTNPBUGSgtYt87UU3Cop-9" value="2 way data binding&lt;div&gt;- Banana in the box : [ ( ngModel ) ]&lt;/div&gt;&lt;div&gt;- import FormsModule&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="348" y="380" width="230" height="60" as="geometry" />
+          <mxGeometry x="310" y="380" width="230" height="60" as="geometry" />
         </mxCell>
         <mxCell id="oTNPBUGSgtYt87UU3Cop-10" value="Data Binding Concepts" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
           <mxGeometry x="360" y="60" width="100" height="40" as="geometry" />
@@ -553,6 +553,54 @@
         </mxCell>
         <mxCell id="w2EJJ-XiTC9nTUwElxNd-2" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Modifiers : changes default DI behaviour&lt;/h1&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- @Self(): search only for current component. Don&#39;t look for any upward component/module&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- @SkipSelf(): skips current component to search for service registration&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- @Host(): search only self component as well as parent component. No further lookup needed.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- @Optional(): makes the service optional. Avoids Null Injector Error by making service as optional&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="140" y="140" width="540" height="260" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="r-sgH5WaWigRquSccsXW" name="Page-9">
+    <mxGraphModel dx="754" dy="425" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gFbb0WOTbOm1YjQqHIf9-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="gFbb0WOTbOm1YjQqHIf9-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="175" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gFbb0WOTbOm1YjQqHIf9-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="365" y="200" as="sourcePoint" />
+            <mxPoint x="285" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gFbb0WOTbOm1YjQqHIf9-1" value="Service&lt;div&gt;&lt;b&gt;ExpenseService&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gFbb0WOTbOm1YjQqHIf9-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=52.5;exitPerimeter=0;" edge="1" parent="1" source="gFbb0WOTbOm1YjQqHIf9-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="202.82608695652175" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gFbb0WOTbOm1YjQqHIf9-2" value="Data Source" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="650" y="150" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="gFbb0WOTbOm1YjQqHIf9-3" value="json-server" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="640" y="230" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gFbb0WOTbOm1YjQqHIf9-6" value="/expenses" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="140" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gFbb0WOTbOm1YjQqHIf9-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gFbb0WOTbOm1YjQqHIf9-7" target="gFbb0WOTbOm1YjQqHIf9-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gFbb0WOTbOm1YjQqHIf9-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="gFbb0WOTbOm1YjQqHIf9-7" target="gFbb0WOTbOm1YjQqHIf9-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gFbb0WOTbOm1YjQqHIf9-7" value="Components" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="165" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gFbb0WOTbOm1YjQqHIf9-9" value="UI" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="165" y="300" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
