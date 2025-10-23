@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IExpense } from '../../../model/expense-model';
 
 @Component({
@@ -8,4 +8,10 @@ import { IExpense } from '../../../model/expense-model';
 })
 export class ExpenseItemComponent {
   @Input() expense!: IExpense;
+
+  @Output() expenseItemEvent = new EventEmitter<string>();
+
+  onDelete() {
+    this.expenseItemEvent.emit(this.expense.id);
+  }
 }

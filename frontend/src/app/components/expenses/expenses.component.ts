@@ -30,4 +30,13 @@ export class ExpensesComponent implements OnInit {
   closeExpenseForm() {
     this.showExpenseForm = false;
   }
+
+  onDeleteExpense(expenseId: string) {
+    this.expenseService.remove(expenseId).subscribe(() => {
+      const position = this.allExpenses.findIndex(
+        (expense) => expense.id === expenseId
+      );
+      this.allExpenses.splice(position, 1);
+    });
+  }
 }

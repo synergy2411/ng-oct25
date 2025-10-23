@@ -24,7 +24,10 @@
   <!-- DISPLAY ALL THE EXPENSES -->
   <div class="row">
     <div class="col-4" *ngFor="let expense of allExpenses">
-      <app-expense-item [expense]="expense"></app-expense-item>
+      <app-expense-item
+        (expenseItemEvent)="onDeleteExpense($event)"
+        [expense]="expense"
+      ></app-expense-item>
     </div>
   </div>
 </div>

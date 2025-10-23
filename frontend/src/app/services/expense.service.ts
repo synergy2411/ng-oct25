@@ -24,5 +24,7 @@ export class ExpenseService {
 
   update() {}
 
-  remove() {}
+  remove(expenseId: string) {
+    return this.httpClient.delete(this.URL_ENDPOINT + expenseId);
+  }
 }
