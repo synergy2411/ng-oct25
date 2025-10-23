@@ -4,19 +4,37 @@
       "id": "e001",
       "title": "shopping",
       "amount": 99,
-      "createdAt": "12-11-2024"
+      "createdAt": "2024-01-16"
     },
     {
       "id": "e002",
       "title": "grocery",
-      "amount": 69,
-      "createdAt": "10-09-2024"
+      "amount": 89,
+      "createdAt": "2024-09-30"
     },
     {
       "id": "e003",
-      "title": "insurance",
-      "amount": 149,
-      "createdAt": "01-04-2025"
+      "title": "car insurance",
+      "amount": 199,
+      "createdAt": "2025-04-02"
+    },
+    {
+      "title": "Planting",
+      "amount": 89,
+      "createdAt": "2025-10-22",
+      "id": "QAZs4ef"
+    },
+    {
+      "title": "Carpet",
+      "amount": 199,
+      "createdAt": "2025-10-22",
+      "id": "0IIN3an"
+    },
+    {
+      "title": "A Pen",
+      "amount": 10,
+      "createdAt": "2025-10-07",
+      "id": "VsytnUY"
     }
   ]
 }

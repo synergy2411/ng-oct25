@@ -369,3 +369,5 @@ rxjs.dev
 - [sudo] npm install -g json-server@0.17.4
 - Create db.json file
 - json-server --watch db.json
+
+# Interceptors - intercet the outging request and incoming responses
