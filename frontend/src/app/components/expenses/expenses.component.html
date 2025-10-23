@@ -21,11 +21,19 @@
     (closeFormEvent)="closeExpenseForm()"
   ></app-expense-form>
 
+  <app-expense-form
+    *ngIf="isSelectedExpense"
+    [expense]="selectedExpense"
+    (closeFormEvent)="closeExpenseForm()"
+    (updateFormEvent)="onUpdateExpense($event)"
+  ></app-expense-form>
+
   <!-- DISPLAY ALL THE EXPENSES -->
   <div class="row">
     <div class="col-4" *ngFor="let expense of allExpenses">
       <app-expense-item
         (expenseItemEvent)="onDeleteExpense($event)"
+        (editExpenseEvent)="onEditExpense($event)"
         [expense]="expense"
       ></app-expense-item>
     </div>

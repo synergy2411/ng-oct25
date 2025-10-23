@@ -22,7 +22,17 @@ export class ExpenseService {
     });
   }
 
-  update() {}
+  update(expenseId: string, expense: IExpense) {
+    return this.httpClient.patch<IExpense>(
+      this.URL_ENDPOINT + expenseId,
+      expense,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+  }
 
   remove(expenseId: string) {
     return this.httpClient.delete(this.URL_ENDPOINT + expenseId);

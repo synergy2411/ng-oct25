@@ -1,7 +1,9 @@
 <div class="backdrop">
   <div class="my-dialog">
     <form [formGroup]="expenseForm" (ngSubmit)="onSubmit()">
-      <h4 class="text-center">Create Expense Form</h4>
+      <h4 class="text-center">
+        {{ expense ? "Edit" : "Create" }} Expense Form
+      </h4>
       <!-- title -->
       <div class="form-floating mb-3">
         <input
@@ -45,7 +47,13 @@
       <div class="row">
         <div class="col">
           <div class="d-grid">
-            <button class="btn btn-primary" type="submit">Create</button>
+            <button
+              class="btn btn-primary"
+              [ngClass]="{ 'btn-success': expense }"
+              type="submit"
+            >
+              {{ expense ? "Edit" : "Create" }}
+            </button>
           </div>
         </div>
         <div class="col">

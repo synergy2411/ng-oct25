@@ -11,7 +11,13 @@ export class ExpenseItemComponent {
 
   @Output() expenseItemEvent = new EventEmitter<string>();
 
+  @Output() editExpenseEvent = new EventEmitter<IExpense>();
+
   onDelete() {
     this.expenseItemEvent.emit(this.expense.id);
+  }
+
+  onEdit() {
+    this.editExpenseEvent.emit(this.expense);
   }
 }

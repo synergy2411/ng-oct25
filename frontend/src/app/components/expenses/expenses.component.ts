@@ -12,6 +12,10 @@ export class ExpensesComponent implements OnInit {
 
   showExpenseForm = false;
 
+  selectedExpense!: IExpense;
+
+  isSelectedExpense = false;
+
   constructor(private expenseService: ExpenseService) {}
 
   ngOnInit(): void {
@@ -29,6 +33,7 @@ export class ExpensesComponent implements OnInit {
 
   closeExpenseForm() {
     this.showExpenseForm = false;
+    this.isSelectedExpense = false;
   }
 
   onDeleteExpense(expenseId: string) {
@@ -38,5 +43,22 @@ export class ExpensesComponent implements OnInit {
       );
       this.allExpenses.splice(position, 1);
     });
+  }
+
+  onEditExpense(expense: IExpense) {
+    this.selectedExpense = expense;
+    this.isSelectedExpense = true;
+  }
+
+  onUpdateExpense(expense: IExpense) {
+    this.expenseService
+      .update(this.selectedExpense.id, expense)
+      .subscribe((updatedExpense) => {
+        const position = this.allExpenses.findIndex(
+          (expense) => expense.id === this.selectedExpense.id
+        );
+        this.allExpenses[position] = updatedExpense;
+        this.isSelectedExpense = false;
+      });
   }
 }
