@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { IExpense } from '../model/expense-model';
 
 @Injectable({
   providedIn: 'root',
@@ -10,9 +11,7 @@ export class ExpenseService {
   constructor(private httpClient: HttpClient) {}
 
   fetchAll() {
-    this.httpClient
-      .get(this.URL_ENDPOINT)
-      .subscribe((expenses) => console.log('RESPONSE : ', expenses));
+    return this.httpClient.get<Array<IExpense>>(this.URL_ENDPOINT);
   }
 
   create() {}

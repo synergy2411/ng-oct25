@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ExpenseService } from '../../services/expense.service';
+import { IExpense } from '../../model/expense-model';
 
 @Component({
   selector: 'app-expenses',
@@ -7,9 +8,13 @@ import { ExpenseService } from '../../services/expense.service';
   styleUrl: './expenses.component.css',
 })
 export class ExpensesComponent implements OnInit {
+  allExpenses!: Array<IExpense>;
+
   constructor(private expenseService: ExpenseService) {}
 
   ngOnInit(): void {
-    this.expenseService.fetchAll();
+    this.expenseService
+      .fetchAll()
+      .subscribe((expenses) => (this.allExpenses = expenses));
   }
 }

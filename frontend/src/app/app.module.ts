@@ -23,6 +23,7 @@ import { CompBComponent } from './components/demo/comp-b/comp-b.component';
 import { RxjsObservableComponent } from './components/demo/rxjs-observable/rxjs-observable.component';
 import { CommonModule } from '@angular/common';
 import { ExpensesComponent } from './components/expenses/expenses.component';
+import { ExpenseItemComponent } from './components/expenses/expense-item/expense-item.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ExpensesComponent } from './components/expenses/expenses.component';
     CompBComponent,
     RxjsObservableComponent,
     ExpensesComponent,
+    ExpenseItemComponent,
   ],
   imports: [
     // Modules: built-in / Custom
