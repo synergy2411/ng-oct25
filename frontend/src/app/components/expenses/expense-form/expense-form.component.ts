@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { IExpense } from '../../../model/expense-model';
 
 @Component({
   selector: 'app-expense-form',
@@ -8,6 +9,9 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 })
 export class ExpenseFormComponent {
   expenseForm!: FormGroup;
+
+  @Output() expenseFormEvent = new EventEmitter<IExpense>();
+  @Output() closeFormEvent = new EventEmitter<void>();
 
   constructor(private fb: FormBuilder) {
     this.expenseForm = this.fb.group({
@@ -18,6 +22,10 @@ export class ExpenseFormComponent {
   }
 
   onSubmit() {
-    console.log(this.expenseForm.value);
+    this.expenseFormEvent.emit(this.expenseForm.value);
+  }
+
+  onClose() {
+    this.closeFormEvent.emit();
   }
 }

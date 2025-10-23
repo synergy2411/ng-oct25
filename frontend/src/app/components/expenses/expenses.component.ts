@@ -19,4 +19,15 @@ export class ExpensesComponent implements OnInit {
       .fetchAll()
       .subscribe((expenses) => (this.allExpenses = expenses));
   }
+
+  onAddNewExpense(expense: IExpense) {
+    this.expenseService.create(expense).subscribe((createdExpense) => {
+      this.allExpenses = [createdExpense, ...this.allExpenses];
+      this.closeExpenseForm();
+    });
+  }
+
+  closeExpenseForm() {
+    this.showExpenseForm = false;
+  }
 }

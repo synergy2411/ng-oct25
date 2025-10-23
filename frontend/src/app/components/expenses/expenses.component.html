@@ -15,7 +15,11 @@
     </div>
   </div>
 
-  <app-expense-form *ngIf="showExpenseForm"></app-expense-form>
+  <app-expense-form
+    *ngIf="showExpenseForm"
+    (expenseFormEvent)="onAddNewExpense($event)"
+    (closeFormEvent)="closeExpenseForm()"
+  ></app-expense-form>
 
   <!-- DISPLAY ALL THE EXPENSES -->
   <div class="row">

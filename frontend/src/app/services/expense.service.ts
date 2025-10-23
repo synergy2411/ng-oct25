@@ -14,7 +14,13 @@ export class ExpenseService {
     return this.httpClient.get<Array<IExpense>>(this.URL_ENDPOINT);
   }
 
-  create() {}
+  create(newExpense: IExpense) {
+    return this.httpClient.post<IExpense>(this.URL_ENDPOINT, newExpense, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  }
 
   update() {}
 
