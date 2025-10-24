@@ -1,21 +1,32 @@
 <header>
   <nav>
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/">Register</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/expenses">Expenses</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/rxjs">RxJS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/users">Users</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/courses">Courses</a>
-      </li>
-    </ul>
+    <div class="row">
+      <div class="col-10">
+        <ul class="nav nav-tabs">
+          <li class="nav-item" *ngIf="!authService.isAuthenticated()">
+            <a class="nav-link" routerLink="/">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/expenses">Expenses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/rxjs">RxJS</a>
+          </li>
+          <li class="nav-item" *ngIf="authService.isAuthenticated()">
+            <a class="nav-link" routerLink="/users">Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/courses">Courses</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-2" *ngIf="authService.isAuthenticated()">
+        <div class="d-grid">
+          <button class="btn btn-sm btn-outline-danger" (click)="onLogout()">
+            Logout
+          </button>
+        </div>
+      </div>
+    </div>
   </nav>
 </header>

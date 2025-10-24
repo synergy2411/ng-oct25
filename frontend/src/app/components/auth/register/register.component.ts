@@ -9,6 +9,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -20,7 +21,11 @@ export class RegisterComponent implements OnInit {
 
   countries = ['india', 'us', 'singapore', 'australia', 'poland'];
 
-  constructor(private fb: FormBuilder, private router: Router) {}
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private authService: AuthService
+  ) {}
 
   ngOnInit(): void {
     this.theForm = this.fb.group(
@@ -117,9 +122,26 @@ export class RegisterComponent implements OnInit {
     }
   }
 
+  // Register the user
   onSubmit() {
     console.log(this.theForm);
     // Navigate user programmatically
-    this.router.navigateByUrl('/expenses');
+    this.authService
+      .userRegister(this.theForm.value.username, this.theForm.value.password)
+      .then(() => {
+        // this.router.navigateByUrl('/expenses');
+        console.log('User credentails added');
+      })
+      .catch((err) => console.error(err));
+  }
+
+  // Login the user
+  onLogin() {
+    this.authService
+      .userLogin(this.theForm.value.username, this.theForm.value.password)
+      .then(() => {
+        this.router.navigateByUrl('/users');
+      })
+      .catch((err) => console.error(err));
   }
 }

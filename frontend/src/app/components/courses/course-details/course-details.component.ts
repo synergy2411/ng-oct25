@@ -21,5 +21,7 @@ export class CourseDetailsComponent implements OnInit {
     this.courseService
       .fetchById(courseId)
       .subscribe((course) => (this.course = course));
+
+    console.log('Query Params : ', this.route.snapshot.queryParams);
   }
 }

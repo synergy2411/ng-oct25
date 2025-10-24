@@ -11,9 +11,9 @@
 .my-dialog {
   position: fixed;
   top: 15vh;
-  left: 30vw;
+  left: 35vw;
   background-color: #fff;
-  width: 40vw;
+  width: 30vw;
   height: auto;
   z-index: 70;
   padding: 24px;

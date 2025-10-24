@@ -4,7 +4,9 @@
       <img class="card-img-top" [src]="course.logo" [alt]="course.title" />
       <div class="card-body">
         <h4 class="card-title">{{ course.title | uppercase }}</h4>
-        <p class="card-text">Duration : {{ course.duration }}</p>
+        <p class="card-text mb-4">Duration : {{ course.duration + "Hrs" }}</p>
+
+        <p><a routerLink="/courses">See all available courses</a></p>
       </div>
     </div>
   </div>

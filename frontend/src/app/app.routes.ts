@@ -6,10 +6,18 @@ import { RxjsObservableComponent } from './components/demo/rxjs-observable/rxjs-
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CoursesComponent } from './components/courses/courses.component';
 import { CourseDetailsComponent } from './components/courses/course-details/course-details.component';
+import { AddCourseComponent } from './components/courses/add-course/add-course.component';
+import { CourseEditComponent } from './components/courses/course-edit/course-edit.component';
+import { loginGuard } from './services/guards/login.guard';
 
 export const APP_ROUTES: Routes = [
   {
     path: '', // http://localhost:4200/
+    pathMatch: 'full',
+    redirectTo: 'auth',
+  },
+  {
+    path: 'auth', // http://localhost:4200/auth
     component: RegisterComponent,
   },
   {
@@ -19,6 +27,7 @@ export const APP_ROUTES: Routes = [
   {
     path: 'users',
     component: UsersComponent,
+    canActivate: [loginGuard],
   },
   {
     path: 'rxjs',
@@ -29,8 +38,16 @@ export const APP_ROUTES: Routes = [
     component: CoursesComponent,
     children: [
       {
-        path: ':courseId', // Route Parameter (:)
+        path: 'add-course',
+        component: AddCourseComponent,
+      },
+      {
+        path: ':courseId', // Route Parameter (:) // http://localhost:4200/courses/xyz
         component: CourseDetailsComponent,
+      },
+      {
+        path: ':courseId/edit',
+        component: CourseEditComponent,
       },
     ],
   },
