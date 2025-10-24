@@ -8,6 +8,7 @@ import {
   ValidationErrors,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -19,7 +20,7 @@ export class RegisterComponent implements OnInit {
 
   countries = ['india', 'us', 'singapore', 'australia', 'poland'];
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
     this.theForm = this.fb.group(
@@ -118,5 +119,7 @@ export class RegisterComponent implements OnInit {
 
   onSubmit() {
     console.log(this.theForm);
+    // Navigate user programmatically
+    this.router.navigateByUrl('/expenses');
   }
 }

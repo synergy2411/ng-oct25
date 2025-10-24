@@ -1,0 +1,17 @@
+<div class="text-center">
+  <h1>Available Courses</h1>
+
+  <div class="row">
+    <div class="col-4" *ngFor="let course of allCourses">
+      <div class="card" (click)="onCourseSelect(course.id)">
+        <div class="card-header course">
+          <h5 class="text-center">
+            {{ course.title | uppercase }}
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>

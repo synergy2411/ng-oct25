@@ -392,3 +392,28 @@ rxjs.dev
 - AJAX
 - HTML5Mode: Regular Mode
   > eg. http://www.example.com/index/first
+
+## Router Terminologies
+
+- Routes: to create route configuration
+- RouterModule (forRoot / forChild): supply route config to angular app
+- RouterLink: creates links, preventing the page reloading
+- RouterOutlet: loads the component template on UI
+- Router Service: programmtically navigate the user
+- ActivatedRoute Service: current path available in the URL
+
+## Nested Routing / Child Routing
+
+http://localhost:4200/courses
+http://localhost:4200/products/add-course
+http://localhost:4200/courses/{courseId}
+http://localhost:4200/products/{courseId}/edit
+
+### Requirement
+
+- Courses API on JSON Server
+- Courses Service to make remote server call
+- Courses Component
+- AddCourse Component
+- CourseDetails Component
+- CourseEdit Component

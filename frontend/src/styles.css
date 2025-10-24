@@ -1,8 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
-/* h1 {
-  color: green;
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
 }
 
-h1 {
-  background-color: grey;
-} */
+.my-dialog {
+  position: fixed;
+  top: 15vh;
+  left: 30vw;
+  background-color: #fff;
+  width: 40vw;
+  height: auto;
+  z-index: 70;
+  padding: 24px;
+}

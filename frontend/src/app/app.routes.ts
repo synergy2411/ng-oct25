@@ -4,6 +4,8 @@ import { ExpensesComponent } from './components/expenses/expenses.component';
 import { UsersComponent } from './components/users/users.component';
 import { RxjsObservableComponent } from './components/demo/rxjs-observable/rxjs-observable.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { CoursesComponent } from './components/courses/courses.component';
+import { CourseDetailsComponent } from './components/courses/course-details/course-details.component';
 
 export const APP_ROUTES: Routes = [
   {
@@ -21,6 +23,16 @@ export const APP_ROUTES: Routes = [
   {
     path: 'rxjs',
     component: RxjsObservableComponent,
+  },
+  {
+    path: 'courses',
+    component: CoursesComponent,
+    children: [
+      {
+        path: ':courseId', // Route Parameter (:)
+        component: CourseDetailsComponent,
+      },
+    ],
   },
   {
     path: '**', // Does not match above specified path

@@ -36,5 +36,25 @@
       "createdAt": "2025-10-07",
       "id": "VsytnUY"
     }
+  ],
+  "courses": [
+    {
+      "id": "c001",
+      "title": "Angular 101",
+      "duration": 40,
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png"
+    },
+    {
+      "id": "c002",
+      "title": "Refresh React",
+      "duration": 60,
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+    },
+    {
+      "id": "c003",
+      "title": "Naive Node",
+      "duration": 80,
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6bebC_d4eWwJ-x9ntqDuT94TvOgumSBVWHg&s"
+    }
   ]
 }

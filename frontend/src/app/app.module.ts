@@ -31,6 +31,10 @@ import { IncomingResponseInterceptor } from './services/interceptors/outgoing-re
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { APP_ROUTES } from './app.routes';
 import { MainNavigationComponent } from './components/layout/main-navigation/main-navigation.component';
+import { CoursesComponent } from './components/courses/courses.component';
+import { AddCourseComponent } from './components/courses/add-course/add-course.component';
+import { CourseDetailsComponent } from './components/courses/course-details/course-details.component';
+import { CourseEditComponent } from './components/courses/course-edit/course-edit.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +61,10 @@ import { MainNavigationComponent } from './components/layout/main-navigation/mai
     ExpenseFormComponent,
     PageNotFoundComponent,
     MainNavigationComponent,
+    CoursesComponent,
+    AddCourseComponent,
+    CourseDetailsComponent,
+    CourseEditComponent,
   ],
   imports: [
     // Modules: built-in / Custom
