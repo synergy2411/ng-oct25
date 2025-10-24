@@ -2,6 +2,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/auth/register/register.component';
@@ -27,6 +28,9 @@ import { DataService } from './services/data.service';
 import { GlobalErrorHandlerService } from './services/global-error-handler.service';
 import { LoggerInterceptor } from './services/interceptors/logger.interceptor';
 import { IncomingResponseInterceptor } from './services/interceptors/outgoing-response.interceptor';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { APP_ROUTES } from './app.routes';
+import { MainNavigationComponent } from './components/layout/main-navigation/main-navigation.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +55,8 @@ import { IncomingResponseInterceptor } from './services/interceptors/outgoing-re
     ExpensesComponent,
     ExpenseItemComponent,
     ExpenseFormComponent,
+    PageNotFoundComponent,
+    MainNavigationComponent,
   ],
   imports: [
     // Modules: built-in / Custom
@@ -58,6 +64,7 @@ import { IncomingResponseInterceptor } from './services/interceptors/outgoing-re
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule.forRoot(APP_ROUTES),
   ],
   providers: [
     DataService,

@@ -364,10 +364,31 @@ rxjs.dev
 > ReplaySubject: replays n number of last emitted events
 > AsyncSubject: last emitted value upon completion
 
-# JSON-SERVER
+# JSON-SERVER: Free fake REST API Server
 
 - [sudo] npm install -g json-server@0.17.4
 - Create db.json file
 - json-server --watch db.json
 
-# Interceptors - intercet the outging request and incoming responses
+# HttpClient -> GET, POST, PATCH, DELETE
+
+- Expenses App (CRUD app)
+
+- Streamlined error handling
+- Typed Request and Response
+- Interceptors
+- Observable API
+
+## Interceptors - intercet the outging request and incoming responses
+
+## Global Error Handler
+
+# Single Page Apps
+
+- Complete app is sent to the browser in one go
+- Very fast
+- Less network bandwidth
+- Better UX
+- AJAX
+- HTML5Mode: Regular Mode
+  > eg. http://www.example.com/index/first
