@@ -401,6 +401,10 @@ rxjs.dev
 - RouterOutlet: loads the component template on UI
 - Router Service: programmtically navigate the user
 - ActivatedRoute Service: current path available in the URL
+- Guards:
+  > CanActivate : allow / disallow to enter into route
+  > CanDeactivate: allow/disallow to leave the route
+- Resolve: pre-populate data into route, can be accessed using 'ActivatedRoute Snapshot Data' property
 
 ## Nested Routing / Child Routing
 

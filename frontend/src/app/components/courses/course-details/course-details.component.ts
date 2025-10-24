@@ -17,11 +17,14 @@ export class CourseDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    let courseId = this.route.snapshot.params['courseId'];
-    this.courseService
-      .fetchById(courseId)
-      .subscribe((course) => (this.course = course));
+    // let courseId = this.route.snapshot.params['courseId'];
+    // this.courseService
+    //   .fetchById(courseId)
+    //   .subscribe((course) => (this.course = course));
 
-    console.log('Query Params : ', this.route.snapshot.queryParams);
+    this.course = this.route.snapshot.data['course'];
+
+    // console.log('SUBSCRIBED COURSE: ', this.route.snapshot.data);
+    // console.log('Query Params : ', this.route.snapshot.queryParams);
   }
 }

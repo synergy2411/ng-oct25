@@ -10,6 +10,7 @@ import { AddCourseComponent } from './components/courses/add-course/add-course.c
 import { CourseEditComponent } from './components/courses/course-edit/course-edit.component';
 import { loginGuard } from './services/guards/login.guard';
 import { shouldLeaveGuard } from './services/guards/should-leave.guard';
+import { courseResolverResolver } from './services/resolvers/course-resolver.resolver';
 
 export const APP_ROUTES: Routes = [
   {
@@ -46,6 +47,7 @@ export const APP_ROUTES: Routes = [
       {
         path: ':courseId', // Route Parameter (:) // http://localhost:4200/courses/xyz
         component: CourseDetailsComponent,
+        resolve: { course: courseResolverResolver },
       },
       {
         path: ':courseId/edit',
