@@ -35,6 +35,7 @@ import { CoursesComponent } from './components/courses/courses.component';
 import { AddCourseComponent } from './components/courses/add-course/add-course.component';
 import { CourseDetailsComponent } from './components/courses/course-details/course-details.component';
 import { CourseEditComponent } from './components/courses/course-edit/course-edit.component';
+import { EgaerModule } from './modules/egaer/egaer.module';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { CourseEditComponent } from './components/courses/course-edit/course-edi
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot(APP_ROUTES),
+    EgaerModule, // Eagerly loaded module
   ],
   providers: [
     DataService,
