@@ -144,4 +144,10 @@ export class RegisterComponent implements OnInit {
       })
       .catch((err) => console.error(err));
   }
+
+  // CanDeactivate Example
+
+  shouldLeave() {
+    return confirm('Are you sure to leave this page?');
+  }
 }

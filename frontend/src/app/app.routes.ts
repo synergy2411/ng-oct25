@@ -9,6 +9,7 @@ import { CourseDetailsComponent } from './components/courses/course-details/cour
 import { AddCourseComponent } from './components/courses/add-course/add-course.component';
 import { CourseEditComponent } from './components/courses/course-edit/course-edit.component';
 import { loginGuard } from './services/guards/login.guard';
+import { shouldLeaveGuard } from './services/guards/should-leave.guard';
 
 export const APP_ROUTES: Routes = [
   {
@@ -19,6 +20,7 @@ export const APP_ROUTES: Routes = [
   {
     path: 'auth', // http://localhost:4200/auth
     component: RegisterComponent,
+    canDeactivate: [shouldLeaveGuard],
   },
   {
     path: 'expenses', // http://localhost:4200/expenses
