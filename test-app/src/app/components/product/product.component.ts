@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
 import { OverviewComponent } from './overview/overview.component';
 import { CommonModule } from '@angular/common';
 
@@ -10,6 +10,19 @@ import { CommonModule } from '@angular/common';
   styleUrl: './product.component.css',
 })
 export class ProductComponent {
+  x = signal(0);
+  y = signal(0);
+
+  computedValue = computed(() => this.x() + this.y());
+
+  increaseY() {
+    this.y.update((value) => value + 2);
+  }
+  increaseX() {
+    // this.x += 1      // WON'T WORK
+    this.x.update((value) => value + 1);
+  }
+
   products = [
     {
       title: 'IPhone 17 Pro',

@@ -432,10 +432,23 @@ http://localhost:4200/products/{courseId}/edit
 
 # Testing
 
+- Components :
+
+  > component is created
+  > component initialize with data model
+  > template is created
+
+- Services
+- Pipes
+
+## Jasmine: JavaScript Testing Framework
+
+## Karma: Test runner
+
 # Latest changes in Angular
 
 - Standalone Component
-- Signals
+- Signals: reactive programming
 - Angular Material
 
 > ng new frontend --no-standalone --no-routing

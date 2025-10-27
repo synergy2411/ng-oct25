@@ -1,5 +1,13 @@
 <h2>Product Works</h2>
 
+<h3>X Value : {{ x() }}</h3>
+<h3>Y Value : {{ y() }}</h3>
+
+<h3>Computed X + Y : {{ computedValue() }}</h3>
+
+<button (click)="increaseX()">Increase X</button>
+<button (click)="increaseY()">Increase Y</button>
+
 <ul>
   @for (product of products; track $index) {
   <li>
