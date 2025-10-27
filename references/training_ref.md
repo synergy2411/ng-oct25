@@ -421,3 +421,15 @@ http://localhost:4200/products/{courseId}/edit
 - AddCourse Component
 - CourseDetails Component
 - CourseEdit Component
+
+---
+
+# Modules : encapsulation
+
+# Lazy Modules
+
+# Testing
+
+# Tips / Tricks
+
+# Latest changes in Angular
