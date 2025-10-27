@@ -57,6 +57,7 @@ export const APP_ROUTES: Routes = [
   },
   {
     path: 'lazy',
+    // loadComponent: () => import('./modules/lazy/components/i-am-lazy/i-am-lazy.component').then((m) => m.IAmLazyComponent),
     loadChildren: () =>
       import('./modules/lazy/lazy.module').then((m) => m.LazyModule),
   },

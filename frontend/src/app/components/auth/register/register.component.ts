@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import {
   AbstractControl,
   FormArray,
@@ -15,6 +15,7 @@ import { AuthService } from '../../../services/auth.service';
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
+  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RegisterComponent implements OnInit {
   theForm!: FormGroup;
@@ -125,6 +126,7 @@ export class RegisterComponent implements OnInit {
   // Register the user
   onSubmit() {
     console.log(this.theForm);
+    debugger;
     // Navigate user programmatically
     this.authService
       .userRegister(this.theForm.value.username, this.theForm.value.password)

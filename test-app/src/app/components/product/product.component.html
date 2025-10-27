@@ -1,0 +1,14 @@
+<h2>Product Works</h2>
+
+<ul>
+  @for (product of products; track $index) {
+  <li>
+    <h4>{{ product.title }}</h4>
+    @if (product.isAvailable) {
+    <p>Price : {{ product.price | currency : "INR" }}L</p>
+    }
+  </li>
+  }
+</ul>
+
+<app-overview></app-overview>

@@ -428,8 +428,15 @@ http://localhost:4200/products/{courseId}/edit
 
 # Lazy Modules
 
-# Testing
-
 # Tips / Tricks
 
+# Testing
+
 # Latest changes in Angular
+
+- Standalone Component
+- Signals
+- Angular Material
+
+> ng new frontend --no-standalone --no-routing
+> ng new test-app
