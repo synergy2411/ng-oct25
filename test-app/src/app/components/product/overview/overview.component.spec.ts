@@ -33,6 +33,13 @@ describe('Overview Component', () => {
     const h2Element = de.query(By.css('h2'));
     expect(h2Element.nativeElement.textContent).toContain(101);
   });
+
+  it('should click the button and call some method in class', () => {
+    spyOn(component, 'onClick');
+    const btnElement = de.query(By.css('.my-button'));
+    btnElement.triggerEventHandler('click', null);
+    expect(component.onClick).toHaveBeenCalled();
+  });
 });
 
 // // Test Suite

@@ -453,3 +453,4 @@ http://localhost:4200/products/{courseId}/edit
 
 > ng new frontend --no-standalone --no-routing
 > ng new test-app
+> ng test --code-coverage

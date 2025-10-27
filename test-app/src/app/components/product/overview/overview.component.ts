@@ -9,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class OverviewComponent {
   productId = 101;
+
+  onClick() {
+    console.log('Clicked');
+  }
 }
